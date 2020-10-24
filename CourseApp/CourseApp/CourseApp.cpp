@@ -18,6 +18,11 @@ int main()
 	}
 	int p;
 	cin >> p;
+	int m[5] = { 1.31,1.39,1.44,1.56,1.92 };
+	for (int i = 0; i < 5; i++) {
+		cout << y(m[i]) << endl;
+
+	}
 	return 0;
 }
 	
