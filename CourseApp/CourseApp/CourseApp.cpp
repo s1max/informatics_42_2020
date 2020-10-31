@@ -3,6 +3,24 @@
 
 #include <iostream>
 using namespace std;
+
+double calc(double x) {
+	const double a = 4.1;
+	const double b = 2.7;
+	double numenator = a * pow(x, 1 / 2.0) - b * log(x);
+	double denominatore = log10(abs(x - 1));
+	double y = numenator / denominatore;
+	return y;
+}
+
+void taskA(double a, double b, double xn, double xk, double dx)
+{
+	for (double x = xn; x <= xk;x += dx) {
+		double y = calc(x);
+		std::cout << x << "\t" << y << std::endl;
+	}
+}
+
 int main()
 {
 	const double a = 4.1;
@@ -11,14 +29,11 @@ int main()
 	double xk = 5.2;
 	double dx = 0.8;
 	
-	for (double x = xn; x <= xk; x += dx) {
-		double numenator = a * pow(x, 1 / 2.0) - b * log(x);
-		double denominatore = log10(abs(x - 1));
-		double y = numenator / denominatore;
-		cout << "x=" << x << "\ny=" << y << endl;
-	}
-	return 0;
+	taskA(a, b, xn, xk, dx);
+	return 0; 
+
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
