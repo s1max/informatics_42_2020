@@ -18,11 +18,13 @@
     <ClCompile Include="CourseApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CourseApp1.cpp">
+    <ClCompile Include="calc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="calccpp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
