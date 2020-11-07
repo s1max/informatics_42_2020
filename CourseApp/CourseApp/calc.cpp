@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 #include "Calc.h"
 using namespace std;
 void taskA(double xn, double xk, double dx, double a)
@@ -21,7 +20,7 @@ void taskB(double* x, int size, double a)
 		cout << x[i] << y << endl;
 	}
 }
-double calc(double x, double a = 2.25)
+double calc(double x, double a )
 {
 	double y = pow(a, (x * x - 1)) - log(x * x - 1) + pow((x * x - 1), 1 / 3.0);
 	return y;
