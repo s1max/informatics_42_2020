@@ -4,23 +4,24 @@
 #include <string>
 #include "Calc.h"
 using namespace std;
+
 class Pistolet {
 private:
-	int kalibr, model, massa;
+	int kalibr;
+	int model;
+	int massa;
 public:
-	Pistolet(int a_kalibr, int a_model, int a_massa) {
-		kalibr = 9;
-		model = 1;
-		massa = 4;
-		get();
-		cout << endl;
+	void display() {
+		cout << "Kalibr is " << kalibr << "\n" << "model is " << model << "\n" << "massa is " << massa << endl;
+	}
+	
+	Pistolet(): Pistolet(9,1,4) {
+		display ();
 	}
 	Pistolet(int a_kalibr, int a_model, int a_massa) {
 		kalibr = a_kalibr;
 		model = a_model;
 		massa = a_massa;
-		get();
-		cout << endl;
 	}
 	void set(int a_kalibr, int a_model, int a_massa) {
 		kalibr = a_kalibr;
@@ -28,18 +29,20 @@ public:
 		massa = a_massa;
 	}
 	
-	void get() {
-		cout << "Kalibr is" << kalibr << "model is" << model << "massa id" << massa << endl;
-	}
+	
 };
+
 
 int main()
 
 
 {
-	Pistolet svd(11, 4, 3);
+	Pistolet svd;
 	svd.set(7, 2, 10);
-	svd.get();
+	svd.display();
+	
+	
+	
 	
 
 	
